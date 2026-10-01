@@ -1,0 +1,372 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #1b1018;
+    color: white;
+    overflow: hidden;
+}
+
+/* SCREEN LAYOUT */
+
+.screen {
+    position: absolute;
+    inset: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow-y: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.screen.active {
+    display: flex;
+    animation: fadeIn 0.8s ease;
+}
+
+/* BACKGROUND IMAGES */
+
+
+#screen1 {
+    background-image:
+        linear-gradient(#0005, #0007),
+        url("./images/screen1.jpg");
+}
+
+#screen2 {
+    background-image:
+        linear-gradient(#0006, #0008),
+        url("./images/screen2.jpg");
+}
+
+#screen3 {
+    background-image:
+        linear-gradient(#0006, #0008),
+        url("./images/screen3.jpg");
+}
+
+#screen4 {
+    background-image:
+        linear-gradient(#0006, #0008),
+        url("./images/screen4.jpg");
+}
+
+#screen5 {
+    background-image:
+        linear-gradient(#0006, #0008),
+        url("./images/screen2.jpg");
+}
+
+/* OUR LOVELY PHOTO */
+#screen6 {
+    background-image:
+        linear-gradient(#0006, #0008),
+        url("./images/screen5.jpg");
+}
+
+/* RONALDO */
+#screen7 {
+    background-image:
+        linear-gradient(#0006, #0008),
+        url("./images/screen4.jpg");
+}
+
+/* GINTOKI */
+#screen8 {
+    background-image:
+        linear-gradient(#0006, #0008),
+        url("./images/screen7.jpg");
+}
+
+/* FINAL TWO SCREENS */
+#finalScreen {
+    background-image:
+        linear-gradient(#0006, #0008),
+        url("./images/screen8.jpg");
+}
+/* TEXT CONTENT */
+
+.content {
+    width: min(700px, 100%);
+    max-height: 90vh;
+    overflow-y: auto;
+    text-align: center;
+    padding: 30px;
+    margin: auto;
+    border-radius: 0;
+    background: transparent;
+    backdrop-filter: none;
+    animation: slideUp 0.8s ease;
+}
+
+.content h1 {
+    font-size: clamp(28px, 5vw, 46px);
+    line-height: 1.2;
+    margin-bottom: 25px;
+    color: #ffe0ed;
+    text-shadow: 2px 3px 10px #000, 0 0 15px #000;
+}
+
+.content p {
+    font-size: clamp(16px, 2.5vw, 20px);
+    line-height: 1.7;
+    margin-bottom: 17px;
+    color: #fff;
+    text-shadow: 1px 2px 8px #000, 0 0 12px #000;
+}
+/* BUTTONS */
+
+button {
+    border: none;
+    border-radius: 30px;
+    padding: 14px 28px;
+    margin-top: 18px;
+    background: #ff5c9a;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 18px #0005;
+    transition: transform 0.25s, background 0.25s;
+}
+
+button:hover {
+    background: #ff2f82;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+.replay-button {
+    display: block;
+    margin: 15px auto 0;
+    background: #a34e80;
+}
+
+/* LOVE REVEAL */
+
+.reveal-screen {
+    background: radial-gradient(circle, #7b1b4b, #210817);
+}
+
+.love-title {
+    color: #ffb6d5 !important;
+    animation: heartbeat 1.3s infinite;
+}
+
+/* CHARACTER IMAGES */
+
+.character-image {
+    display: block;
+    max-width: min(280px, 80%);
+    max-height: 280px;
+    object-fit: contain;
+    margin: 0 auto 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px #0008;
+}
+
+/* PHOTO REVEAL */
+
+.photo-reveal {
+    display: none;
+    margin-top: 25px;
+    animation: fadeIn 1s ease;
+}
+
+.photo-reveal.show {
+    display: block;
+}
+
+.photo-reveal img {
+    width: 100%;
+    max-width: 450px;
+    max-height: 420px;
+    object-fit: contain;
+    border: 5px solid #ffe0ed;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px #0008;
+}
+
+.photo-reveal p {
+    margin-top: 18px;
+}
+
+/* FALLING PETALS AND HEARTS */
+
+#effects {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 20;
+}
+
+.petal,
+.heart {
+    position: absolute;
+    top: -50px;
+    animation: fall linear forwards;
+    user-select: none;
+}
+
+.petal {
+    font-size: 24px;
+}
+
+.heart {
+    font-size: 22px;
+}
+
+/* SAVE POPUP */
+
+.popup-overlay {
+    position: fixed;
+    inset: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.72);
+    z-index: 50;
+}
+
+.popup-overlay.show {
+    display: flex;
+    animation: fadeIn 0.4s ease;
+}
+
+.popup {
+    width: min(500px, 100%);
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 30px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(145deg, #651c48, #2c1026);
+    border: 2px solid #ff9fc6;
+    border-radius: 25px;
+    box-shadow: 0 0 35px #ff5c9a66;
+    animation: popupIn 0.5s ease;
+}
+
+.popup h2 {
+    color: #ffb6d5;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.popup p {
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 14px;
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.06);
+    }
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-10vh) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(110vh) rotate(600deg);
+        opacity: 0;
+    }
+}
+
+@keyframes popupIn {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 600px) {
+    .screen {
+        padding: 12px;
+    }
+
+    .content {
+        padding: 20px 15px;
+        max-height: 92vh;
+    }
+
+    .content h1 {
+        margin-bottom: 18px;
+    }
+
+    .content p {
+        line-height: 1.55;
+        margin-bottom: 13px;
+    }
+
+    button {
+        padding: 13px 22px;
+        font-size: 15px;
+    }
+
+    .popup {
+        padding: 22px 18px;
+    }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}

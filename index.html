@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Little Surprise for Harsha ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="effects"></div>
+
+    <!-- SCREEN 1 -->
+    <section class="screen active" id="screen1">
+        <div class="content">
+            <h1>Hey, you… ❤️</h1>
+
+            <p>
+                I made something for you. Nothing huge.
+                Just a few things I wanted you to know.
+            </p>
+
+            <p>
+                So, take a little break from everything else,
+                put that busy mind of yours on pause, and give me
+                a few minutes of your time. This one's just for you.
+            </p>
+
+            <button onclick="showLoveReveal()">
+                Open Your Surprise 🎁
+            </button>
+        </div>
+    </section>
+
+    <!-- LOVE REVEAL -->
+    <section class="screen reveal-screen" id="loveReveal">
+        <div class="content">
+            <h1 class="love-title">
+                I LOVE YOU, SO MUCHHHHHHHHHH HARSHA ! ❤️
+            </h1>
+
+            <p>
+                🌹 Just a little reminder of how much you mean to me. 🌹
+            </p>
+
+            <button onclick="goToScreen(2)">
+                Continue ❤️
+            </button>
+        </div>
+    </section>
+
+    <!-- SCREEN 2 -->
+    <section class="screen" id="screen2">
+        <div class="content">
+            <h1>REST MODE: ON 🌙</h1>
+
+            <p>
+                This is your reminder to slow down for a while.
+            </p>
+
+            <p>
+                You've been doing so much, and I know you have a lot
+                on your mind. But you don't have to figure everything
+                out right now. Take a breath, relax, and let yourself
+                rest for some time.
+            </p>
+
+            <p>
+                The world can wait. Your responsibilities can wait.
+                Right now, just take care of yourself.
+            </p>
+
+            <p>
+                And if you need a little distraction, well…
+                you know exactly who to bother. 😉
+            </p>
+
+            <button onclick="goToScreen(3)">
+                Continue, My Love ❤️
+            </button>
+        </div>
+    </section>
+
+    <!-- SCREEN 3 -->
+    <section class="screen" id="screen3">
+        <div class="content">
+            <h1>What I Feel ❤️</h1>
+
+            <p>
+                But honestly, I just want you to know how much
+                I care about you.
+            </p>
+
+            <p>
+                I see how hard you try, even on the days when things
+                don't go as planned. I notice the effort you put into
+                everything, even when you don't talk about it.
+            </p>
+
+            <p>
+                I'm proud of you, Harsha. Not just for what you
+                achieve, but for the person you are.
+            </p>
+
+            <p>
+                And even when I don't say it every single time,
+                please know that there's someone quietly rooting
+                for you, cheering for you, and wishing the very
+                best for you.
+            </p>
+
+            <button onclick="goToScreen(4)">
+                Aww, Continue →
+            </button>
+        </div>
+    </section>
+
+    <!-- SCREEN 4 -->
+    <section class="screen" id="screen4">
+        <div class="content">
+            <h1>A Little Reminder 💌</h1>
+
+            <p>
+                You don't always have to be strong, productive,
+                or have everything figured out.
+            </p>
+
+            <p>
+                Some days, doing your best might simply mean
+                getting through the day, and that's okay too.
+            </p>
+
+            <p>
+                Whenever things feel overwhelming, remember
+                that you have someone who believes in you,
+                even when you find it difficult to believe
+                in yourself.
+            </p>
+
+            <p>
+                And yes, that someone is me.
+                So don't even think about forgetting it. ❤️
+            </p>
+
+            <button onclick="goToScreen(5)">
+                I Won't Forget ❤️
+            </button>
+        </div>
+    </section>
+
+    <!-- SCREEN 5 -->
+    <section class="screen" id="screen5">
+        <div class="content">
+            <h1>Okay, Enough Emotional Damage 😂</h1>
+
+            <p>
+                Okay, enough emotional damage for one day.
+                I don't want you getting too emotional and
+                blaming me for it. 😂
+            </p>
+
+            <p>
+                You already know that I love you, but I still
+                enjoy reminding you because, honestly,
+                you deserve to hear it.
+            </p>
+
+            <p>
+                Now stop smiling at your screen like an idiot…
+                unless you're smiling because of me.
+                In that case, carry on. 😌❤️
+            </p>
+
+            <button onclick="goToScreen(6)">
+                There's More →
+            </button>
+        </div>
+    </section>
+
+    <!-- SCREEN 6 -->
+    <section class="screen" id="screen6">
+        <div class="content">
+            <h1>Our Little Memory ❤️</h1>
+
+            <p>
+                Some moments are so simple, yet they become
+                memories you never want to forget.
+                And this one is definitely special to me.
+            </p>
+
+            <p>
+                Every time I look at this picture, I remember
+                the little things that made that moment ours.
+                The smiles, the happiness, and just being together.
+            </p>
+
+            <p>
+                I don't know about you, but I could look at
+                this picture a hundred times and still smile. ❤️
+            </p>
+
+            <button id="photoButton" onclick="revealPhoto()">
+                Unlock Our Memory 📸
+            </button>
+
+            <div id="photoReveal" class="photo-reveal">
+                <img src="./images/our-photo.jpg" alt="Our memory">
+
+                <p>
+                    See? Told you. We're kind of a big deal. 😌❤️
+                </p>
+
+                <button onclick="goToScreen(7)">
+                    Next Surprise →
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCREEN 7 -->
+    <section class="screen" id="screen7">
+        <div class="content">
+            <h1>SIUUUU! THE GOAT 🐐⚽</h1>
+
+            <img
+                class="character-image"
+                src="./images/Cristiano Ronaldo.jpg"
+                alt="Cristiano Ronaldo"
+            >
+
+            <p>
+                Ronaldo is your favourite, but don't worry,
+                you're still my number one.
+                Don't let it get to your head, though. 😂
+            </p>
+
+            <button onclick="goToScreen(8)">
+                Next Surprise →
+            </button>
+        </div>
+    </section>
+
+    <!-- SCREEN 8 -->
+    <section class="screen" id="screen8">
+        <div class="content">
+            <h1>Gintoki Has Entered the Chat! 🍡</h1>
+
+            <img
+                class="character-image"
+                src="./images/gintoki.png"
+                alt="Gintoki"
+            >
+
+            <p>
+                Of course, I couldn't make a surprise for you
+                without including your favourite anime character.
+            </p>
+
+            <p>
+                Here's Gintoki, the one who can be lazy, funny,
+                dramatic, and somehow still manage to be
+                everyone's favourite.
+            </p>
+
+            <p>
+                Honestly, I can see why you like him so much. 😂
+            </p>
+
+            <p>
+                And now you have both Gintoki and me to deal with.
+                Good luck, Harsha!
+            </p>
+
+            <button onclick="showFinal()">
+                One Last Thing →
+            </button>
+        </div>
+    </section>
+
+    <!-- FINAL SCREEN -->
+    <section class="screen" id="finalScreen">
+        <div class="content">
+            <h1>One Last Thing, Handsome… 🌹</h1>
+
+            <p>
+                Before you close this little surprise,
+                I just want you to remember something.
+            </p>
+
+            <p>
+                No matter how busy life gets, how tiring your
+                days become, or how many things you have to
+                deal with, I hope you always find a reason to smile.
+            </p>
+
+            <p>
+                I hope this little card made you feel special,
+                because that was the whole point of making it.
+            </p>
+
+            <p>
+                I put together all these little moments,
+                pictures, and words just for you.
+                And even though I can't fit everything I feel
+                into a few screens, I hope you understand
+                how much you mean to me.
+            </p>
+
+            <p>
+                Now, go ahead and save your surprise.
+                It's yours to keep. ❤️
+            </p>
+
+            <button onclick="showPopup()">
+                Save ❤️
+            </button>
+
+            <button class="replay-button" onclick="restartCard()">
+                Replay from Beginning ↻
+            </button>
+        </div>
+    </section>
+
+    <!-- SAVE POPUP -->
+    <div id="savePopup" class="popup-overlay">
+        <div class="popup">
+            <h2>Oops! You're Already Saved ❤️</h2>
+
+            <p>
+                You thought you were saving this memory?
+            </p>
+
+            <p>
+                Sweetheart, I've already saved you in my heart. 💗
+            </p>
+
+            <p>
+                No delete button, no expiry date,
+                and absolutely no option to uninstall. 😉
+            </p>
+
+            <p>
+                Congratulations, handsome! You've got a
+                permanent place in my heart.
+                And the best part? You don't even have to pay rent. 😂❤️
+            </p>
+
+            <button onclick="closePopup()">
+                Okay, Cutie ❤️
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
